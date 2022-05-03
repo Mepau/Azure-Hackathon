@@ -22,7 +22,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     new_req_body = str.encode(json.dumps(words))
 
-    url = 'http://bae7d975-f237-4d81-9bd5-75a845165442.australiaeast.azurecontainer.io/score'
+    #Define url with the same given from Machine learning endpoint container.
+    url = ""
     api_key = '' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
@@ -38,7 +39,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             return func.HttpResponse(f"{words_res}")
         else:
             return func.HttpResponse(
-             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             "No results found by the machine learning algorithm",
              status_code=200
         )
     except urllib.error.HTTPError as error:
