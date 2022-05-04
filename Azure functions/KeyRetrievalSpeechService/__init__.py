@@ -4,7 +4,6 @@ import urllib.request
 import json
 import os
 import ssl
-import requests
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
