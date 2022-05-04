@@ -66,7 +66,7 @@ def predict(input_line, n_predictions=3):
         # Get top N categories
         topv, topi = output.topk(n_predictions, 1, True)
         predictions = []
-        return (topv[0][0].item(), all_categories[topi[0][0].item()])
+        return all_categories[topi[0][0].item()]
 
 def init():
     global model
