@@ -35,7 +35,7 @@ def main(req: func.HttpRequest,
     try:
         #Ideally this would be done by using durable functions orchestrations and binding the db with query string passed by this starting function
         jsonDocuments = [(lambda document: json.loads(document.to_json(), object_hook=lambda d: SimpleNamespace(**d)))(document) for document in slObjects]
-        logging.info(jsonDocuments)
+  
         response = urllib.request.urlopen(new_req)
         result = response.read()  
         guesses = literal_eval(result.decode())
