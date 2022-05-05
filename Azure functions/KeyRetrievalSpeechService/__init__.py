@@ -9,9 +9,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     #new_req_body = str.encode(json.dumps(words))
 
-    #Define with the susbcription key for the Azure Speech Service
+    #Replace with the susbcription key for the Azure Speech Service
     speechKey = ""
-    #Define with the region of said Azure Speech Service
+
+    #Replace with the region of said Azure Speech Service
     speechRegion = ""
 
     headers = { "Ocp-Apim-Subscription-Key": speechKey, "Content-Type": "application/json"}
@@ -23,12 +24,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         
         response = urllib.request.urlopen(new_req)
-
         result = response.read()
-        
-        logging.info(f"words {result}")
-
         return func.HttpResponse(f"{result}")
+        
     except urllib.error.HTTPError as error:
         logging.info("The request failed with status code: " + str(error.code))
 

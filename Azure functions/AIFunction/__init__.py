@@ -40,12 +40,16 @@ def main(req: func.HttpRequest,
         result = response.read()  
         guesses = literal_eval(result.decode())
 
-        
+        result = []
 
         if guesses:
-            #for guess in guesses:
-            #    if guess
-            return func.HttpResponse(f"{guesses}")
+            #Ideally this shouldn't be done in function but rather use CosmosDB SDK for fast and low latency queries
+            #Another design would be using azure durable for orchestration with input binding to the activity function with query being guesses containing tagId
+            for guess in guesses:
+                for document in jsonDocuments:
+                    if document.tagId == guess:
+                        result.append([document.tagId, document.url])
+            return func.HttpResponse(f"{result}")
         else:
             return func.HttpResponse(
              "No results found by the machine learning algorithm",
