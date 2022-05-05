@@ -25,7 +25,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         
         response = urllib.request.urlopen(new_req)
         result = response.read()
-        return func.HttpResponse(f"{result}")
+        return func.HttpResponse(json.dumps({ "token": result.decode(), "region": speechRegion }))
         
     except urllib.error.HTTPError as error:
         logging.info("The request failed with status code: " + str(error.code))
