@@ -48,7 +48,7 @@ def main(req: func.HttpRequest,
             for guess in guesses:
                 for document in jsonDocuments:
                     if document.tagId == guess:
-                        result.append([document.tagId, document.url])
+                        result.append(document.url)
             return func.HttpResponse(f"{result}")
         else:
             return func.HttpResponse(
