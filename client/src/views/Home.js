@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import VideoPlayer from "../components/VideoPlayer";
 import speechToText from "../utils/speechToText";
@@ -16,7 +16,7 @@ const Home = () => {
           <div className="col-6">
             <i
               className="fas fa-microphone fa-lg mr-2"
-              onClick={() => speechToText(setDisplaytext, setUrls)}
+              onClick={() => speechToText(setDisplaytext, urls,setUrls)}
             >
               MIC
             </i>
@@ -28,7 +28,7 @@ const Home = () => {
         </div>
       </Row>
       <Row>
-        <VideoPlayer url={urls[0]} />
+        <VideoPlayer urls={urls} setUrls={setUrls} />
       </Row>
     </Container>
   );

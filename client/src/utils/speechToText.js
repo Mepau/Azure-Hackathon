@@ -1,10 +1,12 @@
+import { useContext } from "react";
 import axios from "axios";
 import { getTokenOrRefresh } from "../utils/token_utils";
-import urls from "../urls.json"
+import jsonUrls from "../urls.json";
 
 const sdk = require("microsoft-cognitiveservices-speech-sdk");
 
-export default async function speechToText(setDisplaytext, setUrls) {
+export default async function speechToText(setDisplaytext, urls, setUrls) {
+    
   const tokenObj = await getTokenOrRefresh();
   const speechConfig = sdk.SpeechConfig.fromAuthorizationToken(
     tokenObj.authToken,
@@ -32,13 +34,14 @@ export default async function speechToText(setDisplaytext, setUrls) {
           sdk.ResultReason[e.result.reason]
         } | Duration: ${e.result.duration} | Offset: ${e.result.offset}`
       );
+      var newUrls = [];
       setDisplaytext(e.result.text);
       axios
-        .post(urls.aiFunctionUrl, {
+        .post(jsonUrls.aiFunctionUrl, {
           words: e.result.text.split(" "),
         })
         .then((res) => {
-          setUrls(JSON.parse(res.data.replaceAll("'", '"')));
+          setUrls(urls.concat(JSON.parse(res.data.replaceAll("'", '"'))));
         });
     }
   };

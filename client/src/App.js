@@ -7,13 +7,13 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      displayText: "INITIALIZED: ready to test speech..."
+      displayText: "INITIALIZED: ready to test speech...",
     };
   }
 
   async componentDidMount() {
     // check for valid speech key/region
-    const tokenRes =  getTokenOrRefresh();
+    const tokenRes = getTokenOrRefresh();
     if (tokenRes.authToken === null) {
       this.setState({
         displayText: "FATAL_ERROR: " + tokenRes.error,
@@ -23,9 +23,10 @@ export default class App extends Component {
 
   render() {
     return (
-    <div>
-      <h2>{this.state.displayText}</h2>
-      <Home />
-      </div>);
+      <div>
+        <h2>{this.state.displayText}</h2>
+        <Home />
+      </div>
+    );
   }
 }
