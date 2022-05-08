@@ -23,6 +23,8 @@ def main(req: func.HttpRequest,
     req_body= req.get_json()
     words= req_body.get("words")
 
+    if "placer" and "conocer"
+
     new_req_body = str.encode(json.dumps(words))
 
     #Define url with the same given from Machine learning endpoint container.
