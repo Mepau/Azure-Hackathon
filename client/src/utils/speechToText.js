@@ -5,8 +5,7 @@ import jsonUrls from "../urls.json";
 
 const sdk = require("microsoft-cognitiveservices-speech-sdk");
 
-export default async function speechToText(setDisplaytext, urls, setUrls) {
-    
+export default async function speechToText(setDisplaytext, setUrls) {
   const tokenObj = await getTokenOrRefresh();
   const speechConfig = sdk.SpeechConfig.fromAuthorizationToken(
     tokenObj.authToken,
@@ -41,7 +40,10 @@ export default async function speechToText(setDisplaytext, urls, setUrls) {
           words: e.result.text.split(" "),
         })
         .then((res) => {
-          setUrls(urls.concat(JSON.parse(res.data.replaceAll("'", '"'))));
+          setUrls((prevUrls) => {
+            //console.log(prevUrls)
+            return [...prevUrls, ...JSON.parse(res.data.replaceAll("'", '"'))];
+          });
         });
     }
   };

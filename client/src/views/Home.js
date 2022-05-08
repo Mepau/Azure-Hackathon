@@ -7,6 +7,8 @@ const Home = () => {
   const [urls, setUrls] = useState([]);
   const [displayText, setDisplaytext] = useState("");
 
+  
+
   return (
     <Container>
       <Row>
@@ -16,7 +18,7 @@ const Home = () => {
           <div className="col-6">
             <i
               className="fas fa-microphone fa-lg mr-2"
-              onClick={() => speechToText(setDisplaytext, urls,setUrls)}
+              onClick={() => speechToText(setDisplaytext,setUrls)}
             >
               MIC
             </i>

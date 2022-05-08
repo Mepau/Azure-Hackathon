@@ -9,7 +9,10 @@ const VideoPlayer = (props) => {
 
   const loadNextVideo = () => {
 
-    setUrls(urls.slice(1))
+    if(urls[0] == urls[1])
+    setUrls(urls.slice(2))
+    else setUrls(urls.slice(1))
+    console.log(urls)
     //Force rendering by "changing" state
     setCounter(0)
   }
