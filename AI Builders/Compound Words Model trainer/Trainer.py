@@ -11,7 +11,9 @@ from torchtext.vocab import build_vocab_from_iterator
 from C_WordsDS import C_WORDS
 from TextClassifModel import TextClassificationModel
 
-train_iter = C_WORDS(root="./compound_words/data", split="train")
+data_root ="./data"
+
+train_iter, test_iter = C_WORDS(root=data_root)
 tokenizer = get_tokenizer('basic_english')
 
 def yield_tokens(data_iter):
@@ -21,11 +23,8 @@ def yield_tokens(data_iter):
 vocab = build_vocab_from_iterator(yield_tokens(train_iter), specials=["<unk>"])
 vocab.set_default_index(vocab["<unk>"])
 
-#
 text_pipeline = lambda x: vocab(tokenizer(x))
 label_pipeline = lambda x: int(x) - 1
-
-#
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -43,13 +42,10 @@ def collate_batch(batch):
 
 dataloader = DataLoader(train_iter, batch_size=8, shuffle=False, collate_fn=collate_batch)
 
-#
-#
 num_class = len(set([label for (label, text) in train_iter]))
 vocab_size = len(vocab)
 emsize = 64
 model = TextClassificationModel(vocab_size, emsize, num_class).to(device)
-
 
 # Hyperparameters
 EPOCHS = 10 # epoch
@@ -60,7 +56,6 @@ criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=LR)
 scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 1.0, gamma=0.1)
 total_accu = None
-train_iter, test_iter = C_WORDS(root="./compound_words/data")
 train_dataset = to_map_style_dataset(train_iter)
 test_dataset = to_map_style_dataset(test_iter)
 num_train = int(len(train_dataset) * 0.95)
@@ -130,17 +125,4 @@ print('Checking the results of test dataset.')
 accu_test = evaluate(test_dataloader)
 print('test accuracy {:8.3f}'.format(accu_test))
 
-ag_news_label = {1: "Compound",
-                 2: "Not Compound"}
-
-def predict(text, text_pipeline):
-    with torch.no_grad():
-        text = torch.tensor(text_pipeline(text))
-        output = model(text, torch.tensor([0]))
-        return output.argmax(1).item() + 1
-
-ex_text_str = "Abandone a las abejas"
-
-model = model.to("cpu")
-
-print("This is a %s sentence" %ag_news_label[predict(ex_text_str, text_pipeline)])
+torch.save(model.state_dict(), "./compound_words_model.pt")
