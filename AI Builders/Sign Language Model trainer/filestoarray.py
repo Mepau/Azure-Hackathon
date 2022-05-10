@@ -5,7 +5,7 @@ import os
 import unicodedata
 import string
 
-filepath = "../data/identifiers/"
+filepath = "./data/identifiers/"
 
 class fileToArray:
     def __init__(self, filepath ):

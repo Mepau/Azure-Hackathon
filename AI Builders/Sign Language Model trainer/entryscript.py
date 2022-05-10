@@ -30,7 +30,13 @@ class RNN(nn.Module):
 
 
 
-all_categories = ['a0004', 'a0005', 'a0007', 'a0008', 'b0003', 'b0004', 'm0001', 'p0002', 't0001', 't0002', 'y0001']
+all_categories=[]
+with open("categories.txt", "r") as file:
+    for line in file:
+        x = line[:-1]
+        all_categories.append(x)
+
+
 all_letters = string.ascii_letters + " .,;'"
 n_letters = len(all_letters)
 n_hidden = 128
