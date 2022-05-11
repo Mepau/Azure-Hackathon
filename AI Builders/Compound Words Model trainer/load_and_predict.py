@@ -35,7 +35,7 @@ text_pipeline = lambda x: vocab(tokenizer(x))
 model.load_state_dict(torch.load("./compound_words_model.pt"))
 model = model.to("cpu")
 
-ex_text_str = "Que tengas buenas tardes"
+ex_text_str = "Yo me siento bien"
 
 
 print("This is a %s sentence" %ag_news_label[predict(ex_text_str, text_pipeline)])
