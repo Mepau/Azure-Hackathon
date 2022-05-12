@@ -1,0 +1,62 @@
+abandone,abandonar
+abandonar,abandonar
+abandono,abandonar
+abandona,abandonar
+abanico, abanico
+ventilador, abanico
+abeja, abeja
+abotonar, abotonar
+buenos, bueno
+buenas, bueno
+buena, bueno
+bueno, bueno
+bien, bien
+bailar, baile
+baile, baile
+bailarlo, baile
+banar, banar
+banarse, banar
+mucho, mucho
+mucha, mucho
+muchos, mucho
+muchas, mucho
+las, mucho
+los, mucho
+yo, yo
+tu, tu
+vos, tu
+lo, ignorar
+la, ignorar
+gracias, gracias
+agradecido, gracias
+agradecimientos, gracias
+hola, hola
+saludos, hola
+esperar, esperar
+mio, mio
+ustedes, ustedes
+poner, colocar
+colocar, colocar
+tuyo, tuyo
+tuya, tuyo
+usar, usar
+utilizar, usar
+utilizo, yo usar
+utilizamos, nosotros usar
+usaremos, nosotros usar
+utilizamos, nosotros usar
+utilizaremos, nosotros usar
+usamos, nosotros usar
+me gusta, megusta
+me agrada, me gusta
+mucho gusto, muchogusto
+un placer conocerte, muchogusto
+un placer conocerlos, ustedes muchogusto
+buenos dias, buenosdias
+buenas tardes, buenastardes
+buenas noches, buenasnoches
+abotonate, tu abotonate
+abejas, mucho abeja
+espero, yo esperar
+esperaste, tu esperar
+espera, tu esperar
