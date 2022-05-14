@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-MAX_LENGTH = 10
+MAX_LENGTH = 20
 
 class AttnDecoderRNN(nn.Module):
     def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH, device="cpu"):

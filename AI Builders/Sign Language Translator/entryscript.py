@@ -9,7 +9,7 @@ import re
 
 SOS_token = 0
 EOS_token = 1
-MAX_LENGTH = 10
+MAX_LENGTH = 20
 filepath="./"
 
 class Lang:

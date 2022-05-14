@@ -1,7 +1,47 @@
+a, a
+b, b
+c, c
+d, d
+e, e
+f, f
+g, g
+h, h
+i, i
+j, j
+k, k
+l, l
+m, m
+n, n
+o, o
+p, p
+q, q
+r, r
+s, s
+t, t
+u, u
+v, v
+x, x
+y, y
+z, z
+yo, yo
+tu, tu
+vos, tu
+nosotros, nosotros
+nosotras, nosotros
+ella, ella
+ustedes, ustedes
 abandone,abandonar
 abandonar,abandonar
 abandono,abandonar
 abandona,abandonar
+abandonaron, ustedes abandonar
+abandone, yo abandonar
+abandonaste, ustedes abandonar
+dejar, abandonar
+deje, yo abandonar
+dejaste, tu abandonar
+dejaron, ustedes abandonar
+dejamos, nosotros abandonar
 abanico, abanico
 ventilador, abanico
 abeja, abeja
@@ -20,43 +60,112 @@ mucho, mucho
 mucha, mucho
 muchos, mucho
 muchas, mucho
+para, para
+proyecto, proyecto
 las, mucho
 los, mucho
-yo, yo
-tu, tu
-vos, tu
-lo, ignorar
-la, ignorar
 gracias, gracias
 agradecido, gracias
 agradecimientos, gracias
 hola, hola
 saludos, hola
 esperar, esperar
+espera, tu esperar
+espere, yo esperar
+esperaste, tu esperar
+esperemos, nosotros esperar
 mio, mio
+mia, mio
 ustedes, ustedes
 poner, colocar
+pongo, yo colocar
+ponemos, nosotros colocar
 colocar, colocar
+coloque, yo colocar
+colocamos, nosotros colocar
+coloquemos, nosotros colocar
+hablar, hablar
+hablamos, nosotros hablar
+hablaste, tu hablar
+hablado, hablar
+habla, tu hablar
+idioma, idioma
+lenguaje, idioma
+transformar, transformar
+transformacion, transformar
 tuyo, tuyo
 tuya, tuyo
 usar, usar
 utilizar, usar
 utilizo, yo usar
+utilice, yo usar
 utilizamos, nosotros usar
 usaremos, nosotros usar
 utilizamos, nosotros usar
 utilizaremos, nosotros usar
+lengua de senas, lenguadesenas
+lenguaje de senas, lenguadesenas
 usamos, nosotros usar
+querer, querer
+quiero, yo querer
+queremos, nosotros querer
+quiere, querer
+prueba, examen
+examen, examen
 me gusta, megusta
-me agrada, me gusta
+me agrada, megusta
 mucho gusto, muchogusto
 un placer conocerte, muchogusto
-un placer conocerlos, ustedes muchogusto
+un placer conocerlos, muchogusto
 buenos dias, buenosdias
+buen dia, buenosdias
 buenas tardes, buenastardes
 buenas noches, buenasnoches
-abotonate, tu abotonate
+abotonate, tu abotonar
 abejas, mucho abeja
 espero, yo esperar
 esperaste, tu esperar
 espera, tu esperar
+como estas, comoestas
+como estan, comoestas
+yo abandone a las abejas, yo abandonar mucho abeja
+utilice el ventilador, yo usar abanico
+hola como estas, hola comoestas
+hola como estan, hola comoestas
+hola como estas?, hola comoestas
+hola como estan?, hola comoestas
+hola ¿como estas?, hola comoestas
+hola ¿como estan?, hola comoestas
+yo utilice el abanico, yo usar abanico
+espero que esten bien, yo esperar ustedes bien
+espero que estes bien, yo esperar tu bien
+esperamos que estes bien, yo esperar tu bien
+buenas noches y gracias, buenasnoches gracias
+buenas tardes y gracias, buenastardes gracias
+buenos dias y gracias, buenosdias gracias
+hola ¿como estas? y buen dia, hola comoestas buenosdias
+hola ¿como estas? y buenas tardes, hola comoestas buenastardes
+hola ¿como estas? y buenas noches, hola comoestas buenasnoches
+hola como estas? y buen dia, hola comoestas buenosdias
+hola como estas? y buenas tardes, hola comoestas buenastardes
+hola como estas? y buenas noches, hola comoestas buenasnoches
+hola como estan y buen dia, hola comoestas buenosdias
+hola como estan y buenas tardes, hola comoestas buenastardes
+hola como estan y buenas noches, hola comoestas buenasnoches
+hola ¿como estan? y buen dia, hola comoestas buenosdias
+hola ¿como estan? y buenas tardes, hola comoestas buenastardes
+hola ¿como estan? y buenas noches, hola comoestas buenasnoches
+hola como estan? y buen dia, hola comoestas buenosdias
+hola como estan? y buenas tardes, hola comoestas buenastardes
+hola como estan? y buenas noches, hola comoestas buenasnoches
+hola como estan y buen dia, hola comoestas buenosdias
+hola como estan y buenas tardes, hola comoestas buenastardes
+hola como estan y buenas noches, hola comoestas buenasnoches
+lenguaje hablado, idioma hablar
+transformar lenguaje hablado a lenguaje de senas, idioma hablar transformar lenguadesenas
+esto es una prueba para el proyecto en azure, examen para proyecto a z u r e
+esto permite transformar el lenguaje hablado en lenguaje de senas, idioma hablar transformar lenguadesenas
+esto es una prueba para el proyecto en azure para transformar el lenguaje hablado en lenguaje de senas, examen para proyecto a z u r e para idioma hablar transformar lenguadesenas
+que tengan buenos dias, buenosdias
+que tengan buenas tardes, buenastardes
+que tengan buenas noches, buenasnoches

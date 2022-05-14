@@ -3,7 +3,7 @@ import random
 
 SOS_token = 0
 EOS_token = 1
-MAX_LENGTH = 10
+MAX_LENGTH = 20
 
 def evaluate(encoder, decoder, input_lang,output_lang,sentence, max_length=MAX_LENGTH, device="cpu"):
     with torch.no_grad():
