@@ -22,11 +22,12 @@ def main(req: func.HttpRequest,
     
     req_body= req.get_json()
     sentence= req_body.get("sentence")
+    logging.info(sentence)
 
     new_req_body = str.encode(sentence)
 
-    #Define url with the same given from Machine learning endpoint container.
-    url = 'http://55b5dae8-40d6-4139-a4ec-d24549fb6050.australiaeast.azurecontainer.io/score'
+    #Replace with url with the same given from Machine learning endpoint container.
+    url = ''
     api_key = '' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
