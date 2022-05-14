@@ -21,14 +21,12 @@ def main(req: func.HttpRequest,
     allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
     
     req_body= req.get_json()
-    words= req_body.get("words")
+    sentence= req_body.get("sentence")
 
-    if "placer" and "conocer"
-
-    new_req_body = str.encode(json.dumps(words))
+    new_req_body = str.encode(sentence)
 
     #Define url with the same given from Machine learning endpoint container.
-    url = ''
+    url = 'http://55b5dae8-40d6-4139-a4ec-d24549fb6050.australiaeast.azurecontainer.io/score'
     api_key = '' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
@@ -39,17 +37,18 @@ def main(req: func.HttpRequest,
         jsonDocuments = [(lambda document: json.loads(document.to_json(), object_hook=lambda d: SimpleNamespace(**d)))(document) for document in slObjects]
   
         response = urllib.request.urlopen(new_req)
-        result = response.read()  
+        result = response.read()
+        logging.info(result.decode())
         guesses = literal_eval(result.decode())
+        logging.info(guesses)
 
-        result = []
-
+        result= []
         if guesses:
             #Ideally this shouldn't be done in function but rather use CosmosDB SDK for fast and low latency queries
             #Another design would be using azure durable for orchestration with input binding to the activity function with query being guesses containing tagId
             for guess in guesses:
                 for document in jsonDocuments:
-                    if document.tagId == guess:
+                    if document.id == guess:
                         result.append(document.url)
             return func.HttpResponse(f"{result}")
         else:
