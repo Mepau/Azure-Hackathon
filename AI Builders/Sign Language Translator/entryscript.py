@@ -1,3 +1,4 @@
+from locale import normalize
 import torch 
 from EncoderRNN import EncoderRNN
 from AttnDecoderRNN import AttnDecoderRNN
@@ -10,7 +11,7 @@ import re
 SOS_token = 0
 EOS_token = 1
 MAX_LENGTH = 20
-filepath="./"
+
 
 class Lang:
     def __init__(self, name):
@@ -46,7 +47,7 @@ def unicodeToAscii(s):
 def normalizeString(s):
     s = unicodeToAscii(s.lower().strip())
     s = re.sub(r"([.!?])", r" \1", s)
-    s = re.sub(r"[^a-zA-Z0-9.!?]+", r" ", s)
+    s = re.sub(r"[^a-zA-Z0-9]+", r" ", s)
     return s
 
 def readLangs(filepath,lang1, lang2, reverse=False):
@@ -80,8 +81,8 @@ def filterPairs(pairs):
     return [pair for pair in pairs if filterPair(pair)]
 
 
-def prepareData(lang1, lang2, reverse=False):
-    input_lang, output_lang, pairs = readLangs(lang1, lang2, reverse)
+def prepareData(filepath, lang1, lang2, reverse=False):
+    input_lang, output_lang, pairs = readLangs(filepath, lang1, lang2, reverse)
     pairs = filterPairs(pairs)
     for pair in pairs:
         input_lang.addSentence(pair[0])
@@ -143,10 +144,13 @@ def init():
     global attn_decoder1
     global input_lang
     global output_lang
+    global device 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    filepath="./"
     input_lang, output_lang, _ = prepareData(filepath,'spanish', 'sign')
     hidden_size = 256
-    encoder1 = EncoderRNN(input_lang.n_words, hidden_size)
-    attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1)
+    encoder1 = EncoderRNN(input_lang.n_words, hidden_size, device=device)
+    attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1, device=device)
     model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), "sign_language_model.pt")
     checkpoint = torch.load(model_path)
     encoder1.load_state_dict(checkpoint["Enconder_state_dict"])
@@ -154,5 +158,10 @@ def init():
     
 
 def run(data):
-    output_words , _ = evaluate(encoder1, attn_decoder1,input_lang, output_lang, data)
+    sentence = normalizeString(data)
+    try:
+        output_words , _ = evaluate(encoder1, attn_decoder1,input_lang, output_lang, sentence=sentence, device=device)
+    except:
+        output_words = "<EOS>"    
     return output_words
+

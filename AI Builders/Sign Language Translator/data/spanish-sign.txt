@@ -37,6 +37,8 @@ abandona,abandonar
 abandonaron, ustedes abandonar
 abandone, yo abandonar
 abandonaste, ustedes abandonar
+michael, m i c h a el
+azure, a z u r e
 dejar, abandonar
 deje, yo abandonar
 dejaste, tu abandonar
@@ -60,6 +62,7 @@ mucho, mucho
 mucha, mucho
 muchos, mucho
 muchas, mucho
+nombre, nombre
 para, para
 proyecto, proyecto
 las, mucho
@@ -80,6 +83,9 @@ ustedes, ustedes
 poner, colocar
 pongo, yo colocar
 ponemos, nosotros colocar
+presentar, presentar
+presentare, yo presentar
+presentaremos, nosotros presentar
 colocar, colocar
 coloque, yo colocar
 colocamos, nosotros colocar
@@ -90,6 +96,7 @@ hablaste, tu hablar
 hablado, hablar
 habla, tu hablar
 idioma, idioma
+julia, j u l i a
 lenguaje, idioma
 transformar, transformar
 transformacion, transformar
@@ -129,6 +136,7 @@ espera, tu esperar
 como estas, comoestas
 como estan, comoestas
 yo abandone a las abejas, yo abandonar mucho abeja
+abandone a la abeja, yo abandonar abeja
 utilice el ventilador, yo usar abanico
 hola como estas, hola comoestas
 hola como estan, hola comoestas
@@ -169,3 +177,10 @@ esto es una prueba para el proyecto en azure para transformar el lenguaje hablad
 que tengan buenos dias, buenosdias
 que tengan buenas tardes, buenastardes
 que tengan buenas noches, buenasnoches
+mi nombre es michael, mio nombre m i c h a e l
+mi nombre es yosiris, mio nombre y o s i r i s
+mi nombre es jon, mio nombre j o n
+mi nombre es alex, mio nombre a l e x
+les presentare este proyecto, yo presentar proyecto
+presentare este proyecto en azure, yo presentar proyecto a z u r e
+este proyecto permite transformar el lenguaje hablado en lenguaje de senas, proyecto transformar idioma hablar lenguadesenas

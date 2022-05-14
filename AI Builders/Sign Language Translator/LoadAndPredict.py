@@ -82,7 +82,7 @@ checkpoint = torch.load("./sign_language_model.pt")
 encoder1.load_state_dict(checkpoint["Enconder_state_dict"])
 attn_decoder1.load_state_dict(checkpoint["Decoder_state_dict"])
 
-text_to_translate = "esto permite transformar el lenguaje hablado en lenguaje de senas"
+text_to_translate = "Hola."
 
 print(normalizeString(text_to_translate))
 
