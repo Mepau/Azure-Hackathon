@@ -1,37 +1,45 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import VideoPlayer from "../components/VideoPlayer";
 import speechToText from "../utils/speechToText";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const [urls, setUrls] = useState([]);
   const [displayText, setDisplaytext] = useState("");
-
   
 
   return (
     <Container>
-      <Row>
-        <h1 className="display-4 mb-3">Speech sample app</h1>
+      <Col>
+        <Row md lg="3" className="justify-content-md-center">
+          <span>
+            <FontAwesomeIcon
+              onClick={() => speechToText(setDisplaytext, setUrls)}
+              size="lg"
+              border
+              icon={faMicrophone}
+            />
+            <span>Convert speech to text from your mic.</span>
+          </span>
+        </Row>
 
-        <div className="row main-container">
-          <div className="col-6">
-            <i
-              className="fas fa-microphone fa-lg mr-2"
-              onClick={() => speechToText(setDisplaytext,setUrls)}
-            >
-              MIC
-            </i>
-            Convert speech to text from your mic.
-          </div>
-          <div className="col-6 output-display rounded">
-            <code>{displayText}</code>
-          </div>
-        </div>
-      </Row>
-      <Row>
-        <VideoPlayer urls={urls} setUrls={setUrls} />
-      </Row>
+        <Row md lg="2" className="justify-content-md-center">
+          <code style={{ fontSize: 50 }}>{displayText}</code>
+        </Row>
+        <Row
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(4,51,181,1) 0%, rgba(186,194,231,1) 50%, rgba(4,51,181,1) 100%)",
+          }}
+          md
+          lg="2"
+          className="justify-content-md-center"
+        >
+          <VideoPlayer urls={urls} setUrls={setUrls} />
+        </Row>
+      </Col>
     </Container>
   );
 };

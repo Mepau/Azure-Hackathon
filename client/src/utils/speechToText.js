@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import axios from "axios";
 import { getTokenOrRefresh } from "../utils/token_utils";
 import jsonUrls from "../urls.json";
@@ -33,17 +32,21 @@ export default async function speechToText(setDisplaytext, setUrls) {
           sdk.ResultReason[e.result.reason]
         } | Duration: ${e.result.duration} | Offset: ${e.result.offset}`
       );
-      var newUrls = [];
       setDisplaytext(e.result.text);
+
+      if(e.result.text.includes("Parar micrófono")){
+        recognizer.stopContinuousRecognitionAsync()
+        recognizer.close()
+      }
       axios
         .post(jsonUrls.aiFunctionUrl, {
-          words: e.result.text.split(" "),
+          sentence: e.result.text,
         })
         .then((res) => {
-          setUrls((prevUrls) => {
-            //console.log(prevUrls)
-            return [...prevUrls, ...JSON.parse(res.data.replaceAll("'", '"'))];
-          });
+          if (res.data.length > 0)
+            setUrls((prevUrls) => {
+              return [...prevUrls, ...JSON.parse(res.data.replace(/'/g, '"'))];
+            });
         });
     }
   };

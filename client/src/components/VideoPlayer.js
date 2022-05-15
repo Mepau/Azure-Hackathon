@@ -6,7 +6,6 @@ const VideoPlayer = (props) => {
   const { urls, setUrls } = props;
   const [ counter, setCounter] = useState(0)
 
-
   const loadNextVideo = () => {
 
     if(urls[0] == urls[1])
