@@ -135,6 +135,10 @@ esperaste, tu esperar
 espera, tu esperar
 como estas, comoestas
 como estan, comoestas
+como estas?, comoestas
+como estan?, comoestas
+¿Cómo están?, comoestas
+¿Cómo estás?, comoestas
 yo abandone a las abejas, yo abandonar mucho abeja
 abandone a la abeja, yo abandonar abeja
 utilice el ventilador, yo usar abanico
@@ -170,9 +174,10 @@ hola como estan y buen dia, hola comoestas buenosdias
 hola como estan y buenas tardes, hola comoestas buenastardes
 hola como estan y buenas noches, hola comoestas buenasnoches
 lenguaje hablado, idioma hablar
-transformar lenguaje hablado a lenguaje de senas, idioma hablar transformar lenguadesenas
+transformar lenguaje hablado al lenguaje de senas, idioma hablar transformar lenguadesenas
 esto es una prueba para el proyecto en azure, examen para proyecto a z u r e
-esto permite transformar el lenguaje hablado en lenguaje de senas, idioma hablar transformar lenguadesenas
+Esto permite transformar el lenguaje hablado al lenguaje de señas, transformar idioma hablar lenguadesenas
+esto permite transformar el lenguaje hablado en lenguaje de senas, transformar idioma hablar  lenguadesenas
 esto es una prueba para el proyecto en azure para transformar el lenguaje hablado en lenguaje de senas, examen para proyecto a z u r e para idioma hablar transformar lenguadesenas
 que tengan buenos dias, buenosdias
 que tengan buenas tardes, buenastardes
@@ -182,5 +187,6 @@ mi nombre es yosiris, mio nombre y o s i r i s
 mi nombre es jon, mio nombre j o n
 mi nombre es alex, mio nombre a l e x
 les presentare este proyecto, yo presentar proyecto
+les presento este proyecto, yo presentar proyecto
 presentare este proyecto en azure, yo presentar proyecto a z u r e
 este proyecto permite transformar el lenguaje hablado en lenguaje de senas, proyecto transformar idioma hablar lenguadesenas
