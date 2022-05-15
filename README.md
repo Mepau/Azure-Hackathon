@@ -1,4 +1,4 @@
-#Speech to Sign Azure application
+# Speech to Sign Azure application
 
 This application was made for **Latin American Azure Hackathon + AI Challenge**.
 
