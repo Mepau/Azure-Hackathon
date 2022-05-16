@@ -121,9 +121,13 @@ prueba, examen
 examen, examen
 me gusta, megusta
 me agrada, megusta
+me gusta., megusta
+me agrada., megusta
 mucho gusto, muchogusto
 un placer conocerte, muchogusto
 un placer conocerlos, muchogusto
+un placer conocerte., muchogusto
+un placer conocerlos., muchogusto
 buenos dias, buenosdias
 buen dia, buenosdias
 buenas tardes, buenastardes
@@ -133,21 +137,28 @@ abejas, mucho abeja
 espero, yo esperar
 esperaste, tu esperar
 espera, tu esperar
-como estas, comoestas
-como estan, comoestas
-como estas?, comoestas
-como estan?, comoestas
-¿Cómo están?, comoestas
-¿Cómo estás?, comoestas
-yo abandone a las abejas, yo abandonar mucho abeja
-abandone a la abeja, yo abandonar abeja
-utilice el ventilador, yo usar abanico
+hola., hola
+como estas., comoestas
+como estan., comoestas
+como estas?., comoestas
+como estan?., comoestas
+¿Cómo están?., comoestas
+¿Cómo estás?., comoestas
+yo abandone a las abejas., yo abandonar mucho abeja
+abandone a la abeja., yo abandonar abeja
+utilice el ventilador., yo usar abanico
 hola como estas, hola comoestas
 hola como estan, hola comoestas
 hola como estas?, hola comoestas
 hola como estan?, hola comoestas
 hola ¿como estas?, hola comoestas
 hola ¿como estan?, hola comoestas
+hola como estas., hola comoestas
+hola como estan., hola comoestas
+hola como estas?., hola comoestas
+hola como estan?., hola comoestas
+hola ¿como estas?., hola comoestas
+hola ¿como estan?., hola comoestas
 yo utilice el abanico, yo usar abanico
 espero que esten bien, yo esperar ustedes bien
 espero que estes bien, yo esperar tu bien
@@ -155,6 +166,15 @@ esperamos que estes bien, yo esperar tu bien
 buenas noches y gracias, buenasnoches gracias
 buenas tardes y gracias, buenastardes gracias
 buenos dias y gracias, buenosdias gracias
+buenas noches y gracias., buenasnoches gracias
+buenas tardes y gracias., buenastardes gracias
+buenos dias y gracias., buenosdias gracias
+gracias y buenos dias, buenosdias gracias
+gracias y buenos dias., buenosdias gracias
+gracias y buenas tardes, buenastardes gracias
+gracias y buenas tardes., buenastardes gracias
+gracias y buenas noches, buenasnoches gracias
+gracias y buenas noches., buenasnoches gracias
 hola ¿como estas? y buen dia, hola comoestas buenosdias
 hola ¿como estas? y buenas tardes, hola comoestas buenastardes
 hola ¿como estas? y buenas noches, hola comoestas buenasnoches
@@ -174,6 +194,26 @@ hola como estan y buen dia, hola comoestas buenosdias
 hola como estan y buenas tardes, hola comoestas buenastardes
 hola como estan y buenas noches, hola comoestas buenasnoches
 lenguaje hablado, idioma hablar
+transformar lenguaje hablado al lenguaje de senas., idioma hablar transformar lenguadesenas
+esto es una prueba para el proyecto en azure., examen para proyecto a z u r e
+Esto permite transformar el lenguaje hablado al lenguaje de señas., transformar idioma hablar lenguadesenas
+esto permite transformar el lenguaje hablado en lenguaje de senas., transformar idioma hablar  lenguadesenas
+esto es una prueba para el proyecto en azure para transformar el lenguaje hablado en lenguaje de senas., examen para proyecto a z u r e para idioma hablar transformar lenguadesenas
+que tengan buenos dias, buenosdias
+que tengan buenas tardes, buenastardes
+que tengan buenas noches, buenasnoches
+mi nombre es michael., mio nombre m i c h a e l
+mi nombre es yosiris., mio nombre y o s i r i s
+mi nombre es jon., mio nombre j o n
+mi nombre es alex., mio nombre a l e x
+les presentare este proyecto., yo presentar proyecto
+les presento este proyecto., yo presentar proyecto
+presentare este proyecto en azure., yo presentar proyecto a z u r e
+este proyecto permite transformar el lenguaje hablado en lenguaje de senas., proyecto transformar idioma hablar lenguadesenas
+buenos dias., buenosdias
+buenas tardes., buenastardes
+buenas noches., buenas noches
+mi nombre es michael, mio nombre m i c h a e l
 transformar lenguaje hablado al lenguaje de senas, idioma hablar transformar lenguadesenas
 esto es una prueba para el proyecto en azure, examen para proyecto a z u r e
 Esto permite transformar el lenguaje hablado al lenguaje de señas, transformar idioma hablar lenguadesenas
@@ -182,11 +222,21 @@ esto es una prueba para el proyecto en azure para transformar el lenguaje hablad
 que tengan buenos dias, buenosdias
 que tengan buenas tardes, buenastardes
 que tengan buenas noches, buenasnoches
-mi nombre es michael, mio nombre m i c h a e l
-mi nombre es yosiris, mio nombre y o s i r i s
-mi nombre es jon, mio nombre j o n
-mi nombre es alex, mio nombre a l e x
-les presentare este proyecto, yo presentar proyecto
-les presento este proyecto, yo presentar proyecto
-presentare este proyecto en azure, yo presentar proyecto a z u r e
-este proyecto permite transformar el lenguaje hablado en lenguaje de senas, proyecto transformar idioma hablar lenguadesenas
+hola ¿como estas? y buen dia., hola comoestas buenosdias
+hola ¿como estas? y buenas tardes., hola comoestas buenastardes
+hola ¿como estas? y buenas noches., hola comoestas buenasnoches
+hola como estas? y buen dia., hola comoestas buenosdias
+hola como estas? y buenas tardes., hola comoestas buenastardes
+hola como estas? y buenas noches., hola comoestas buenasnoches
+hola como estan y buen dia., hola comoestas buenosdias
+hola como estan y buenas tardes., hola comoestas buenastardes
+hola como estan y buenas noches., hola comoestas buenasnoches
+hola ¿como estan? y buen dia., hola comoestas buenosdias
+hola ¿como estan? y buenas tardes., hola comoestas buenastardes
+hola ¿como estan? y buenas noches., hola comoestas buenasnoches
+hola como estan? y buen dia., hola comoestas buenosdias
+hola como estan? y buenas tardes., hola comoestas buenastardes
+hola como estan? y buenas noches., hola comoestas buenasnoches
+hola como estan y buen dia., hola comoestas buenosdias
+hola como estan y buenas tardes., hola comoestas buenastardes
+hola como estan y buenas noches., hola comoestas buenasnoches
